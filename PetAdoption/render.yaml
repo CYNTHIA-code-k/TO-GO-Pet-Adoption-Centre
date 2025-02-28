@@ -3,7 +3,8 @@ services:
     name: pet-adoption
     env: python
     buildCommand: ./build.sh
-    startCommand: gunicorn wsgi:application
+    startCommand: gunicorn PetAdoption.wsgi:application
+
     envVars:
       - key: SECRET_KEY
         generateValue: true
