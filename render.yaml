@@ -4,7 +4,7 @@ services:
     env: python
     rootDir: PetAdoption # This tells Render to only deploy this folder
     buildCommand: ../build.sh # Go one folder back to access build.sh
-    startCommand: gunicorn PetAdoption.wsgi:application
+    startCommand: gunicorn PetAdoption.wsgi:application --chdir PetAdoption
 
     envVars:
       - key: SECRET_KEY

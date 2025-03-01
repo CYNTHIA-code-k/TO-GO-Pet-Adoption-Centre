@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# Install dependencies
-pip install -r requirements.txt
+# Move to backend directory
+cd PetAdoption
 
-# Run Migrations
+# Install dependencies
+pip install -r ../requirements.txt
+
+# Migrate Database
 python manage.py migrate
 
 # Collect Static Files
