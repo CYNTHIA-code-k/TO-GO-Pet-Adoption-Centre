@@ -1,4 +1,4 @@
-#!/home/cynthia/Development/code/projects/TO-GO-Pet-Adoption-Centre/PetAdoption/venv/bin/python3
+#!/home/cynthia/Development/code/projects/TO-GO-Pet-Adoption-Centre/PetAdoption/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

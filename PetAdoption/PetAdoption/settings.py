@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  
     'django_filters',
-    'petcentre', 
+    'petcenter', 
     'corsheaders',
     'crispy_forms',
     "crispy_bootstrap4",
