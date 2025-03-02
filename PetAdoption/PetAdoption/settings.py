@@ -68,7 +68,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://your-render-app-name.onrender.com",  # Add your actual Render URL
+    "https://to-go-pet-adoption-centre-1.onrender.com",   
 ]
 
 # CORS_ALLOW_ALL_ORIGINS = True 
