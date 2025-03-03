@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -71,7 +76,17 @@ CORS_ALLOWED_ORIGINS = [
     "https://to-go-pet-adoption-centre-1.onrender.com",   
 ]
 
-# CORS_ALLOW_ALL_ORIGINS = True 
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://to-go-pet-adoption-centre.onrender.com",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+CORS_ALLOW_HEADERS = ["Content-Type", "Authorization"]
 
 ROOT_URLCONF = 'PetAdoption.urls'
 
@@ -97,12 +112,16 @@ WSGI_APPLICATION = 'PetAdoption.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
 
 
 # Password validation
