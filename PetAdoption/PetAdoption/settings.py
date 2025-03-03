@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'to-go-pet-adoption-centre.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*.onrender.com', 'to-go-pet-adoption-centre.onrender.com', 'to-go-pet-adoption-centre-nkmn.onrender.com']
 
 
 # Application definition
